@@ -38,7 +38,7 @@ A simple and functional To-Do List application built with **React** and **Vite**
 ---
 
 ## 📁 Project Structure
-
+```
 react-todo-app/
 │
 ├── public/
@@ -56,7 +56,7 @@ react-todo-app/
 ├── index.html                  # Vite root HTML file
 ├── package.json                # Project metadata and dependencies
 ├── vite.config.js              # Vite build tool configuration
-└── README.md                   # Project documentation
+└── README.md                   # Project documentation ```
 
 ## 🧰 Technologies Used
 
