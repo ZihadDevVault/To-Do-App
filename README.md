@@ -56,8 +56,8 @@ react-todo-app/
 ├── index.html                  # Vite root HTML file
 ├── package.json                # Project metadata and dependencies
 ├── vite.config.js              # Vite build tool configuration
-└── README.md                   # Project documentation ``` 
-
+└── README.md                   # Project documentation
+```
 ## 🧰 Technologies Used
 
 - **React:** For building the user interface with reusable components and managing state.  
