@@ -1,18 +1,13 @@
-import classes from './task.module.css';
+import useToDo from '../hooks/useToDo';
+import classes from '../styles/task.module.css';
 import { useState } from 'react';
 
-const DisplayDatas=({task,setTask,setTesk,visibilty,setVisibility})=>{
+const DisplayDatas=({task,setTask,visibilty,setVisibility})=>{
 let [tablelis,setTablelis]=useState(false)
-    const filtrdata=(task)=>{
-        if(visibilty=="completed"){
-            return task.filter((item)=>{return (item.isComplete)})
-        }    
-        if(visibilty=="incompleted"){
-            return task.filter((item)=>{return (!item.isComplete)})
-        }    
-    
-        return task
-    }
+
+const{DeleteData,filtrdata}=useToDo({task,setTask,visibilty})
+
+
     let filters=filtrdata(task)
     
     const toggole=(id)=>{
@@ -27,12 +22,11 @@ let [tablelis,setTablelis]=useState(false)
          
 
     }
-      
-        
 
 
 
-    const displayData=(filters)=>{
+
+     const displayData=(filters)=>{
         return(
             filters.map((item)=>{
                 return(
@@ -55,10 +49,15 @@ let [tablelis,setTablelis]=useState(false)
                     </td>
                     
                     <td key={item.id} className={item.isComplete?classes.lineStyle:''}><h2>{item.text}</h2></td>
-                   <td>{item.taskDate.getTime()}</td>
+                   <td>{item.taskDate}</td>
                    <td>
                     {
-                        <button className={`${classes.conditionbutton} ${!item.isComplete?classes.running:''}`}>{!item.isComplete?'Running':'Completed'}</button>
+                        <div>
+                            <button className={`${classes.conditionbutton} ${!item.isComplete?classes.running:''}`}>{!item.isComplete?'Running':'Completed'}</button>
+
+                            <button className={`${classes.deleteButton}`} onClick={()=>DeleteData(item.id)}>Delete</button>
+                        </div>
+                        
                     }
                     
                     

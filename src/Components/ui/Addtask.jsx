@@ -1,14 +1,14 @@
 import shortid from "shortid";
 import Layout from "./layout";
 import Button from './buttons';
-import classes from './task.module.css';
+import classes from '../styles/task.module.css';
+import {formatCustomTime} from '../hooks/gettime'
 const Addtask=({text,setTask,task,setText})=>{
-
     const creasteTask=(text)=>{
         let data={
             text,
             isComplete:false,
-            taskDate:new Date(),
+            taskDate:formatCustomTime(new Date()),
             id:shortid.generate(),
         }
 

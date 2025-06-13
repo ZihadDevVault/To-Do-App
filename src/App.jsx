@@ -1,4 +1,4 @@
-import CreateNewTask from "./Components/CreateNewTask";
+import CreateNewTask from "./Components/ui/CreateNewTask";
 
 const App=()=>{
   return(

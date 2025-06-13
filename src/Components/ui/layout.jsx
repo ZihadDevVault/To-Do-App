@@ -1,4 +1,4 @@
-import classes from './task.module.css'
+import classes from '../styles/task.module.css';
 
 const Layout=(props)=>{
     return(
