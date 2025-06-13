@@ -69,7 +69,7 @@ react-todo-app/
 
 ## 📸 Screenshot
 
-![App Screenshot](./assets/react.svg)  
+![App Screenshot](./src/assets/AppPhoto.png)  
 
 
 
